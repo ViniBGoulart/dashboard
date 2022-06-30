@@ -1,0 +1,654 @@
+body {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .contentMainOverview {
+    background-color: #f7f8fc;
+    flex: 5;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  header h3 {
+    display: flex;
+    align-items: center;
+    cursor: default;
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .rightHeader {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .itemsRightHeader {
+    display: flex;
+    gap: 25px;
+    border-right: 1px solid #dfe0eb;
+    padding-right: 30px;
+    align-items: center;
+  }
+  
+  #inputSearchHeader {
+    padding: 2px;
+    outline: none;
+    border: 1px solid #dfe0eb;
+    border-radius: 9px;
+    margin-left: 15px;
+    background: #f2f2f7;
+    border: 1px solid #3751ff;
+    box-shadow: 0px 0px 2px grey;
+  }
+  
+  #inputSearchHeader:focus {
+    outline: none;
+    border: 2px solid #3751ff;
+    border-radius: 9px;
+  }
+  
+  .fa-search {
+    padding: 6.5px;
+    cursor: pointer;
+    color: #c5c7cd;
+  }
+  
+  .fa-searchNotCliked {
+    padding: 6.5px;
+    cursor: pointer;
+    color: #c5c7cd;
+  }
+  
+  .fa-searchClicked {
+    padding: 6.5px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #3751ff;
+  }
+  
+  .fa-bell {
+    padding: 6.5px;
+    cursor: pointer;
+    color: #c5c7cd;
+    z-index: 2;
+  }
+  
+  .fa-bellNotCliked {
+    padding: 6.5px;
+    cursor: pointer;
+    color: #c5c7cd;
+    z-index: 2;
+  }
+  
+  .fa-bellClicked {
+    padding: 6.5px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #3751ff;
+    z-index: 2;
+  }
+  
+  .itemsRightHeader i:hover {
+    color: #3751ff;
+  }
+  
+  #transparentContentForNotification {
+    background-color: #38383825;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .contentNotificationHeader {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    height: 300px;
+    width: 300px;
+    border: 1px solid #3751ff;
+    border-radius: 9px;
+    background-color: #fafbfc;
+    box-shadow: 0px 0px 2px black;
+    z-index: 2;
+  }
+  
+  .contentNotificationHeader h3 {
+    flex: 1;
+    color: #3751ff;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #dfe0eb;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contentNotificationHeader ul {
+    margin: 0;
+    list-style: none;
+    flex-direction: column;
+    display: flex;
+    flex: 5;
+    justify-content: space-between;
+  }
+  
+  .contentNotificationHeader ul li {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dfe0eb;
+    flex: 1;
+  }
+  
+  .contentNotificationHeader ul li::before {
+    content: "\2022";
+    color: #3751ff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  .accountHeader {
+    align-items: center;
+    font-size: 12px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .nameAccountHeader {
+    cursor: pointer;
+  }
+  
+  .nameAccountHeader p {
+    margin: 0;
+  }
+  
+  .accountHeader i {
+    cursor: pointer;
+  }
+  
+  .contentMainOverviewPadding {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ContentMainOverviewTop {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    padding: 0px 20px;
+  }
+  
+  .ContentMainOverviewTopLeft {
+    gap: 25px;
+    display: flex;
+    flex: 1;
+  }
+  
+  .ContentMainOverviewTopRight {
+    gap: 25px;
+    display: flex;
+    flex: 1;
+  }
+  
+  .boxsTopsMainOverview {
+    border: 1px solid #dfe0eb;
+    flex: 1;
+    display: flex;
+    margin-top: 15px;
+    padding: 30px 0px;
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: #9fa2b4;
+    transition: color 300ms ease-in-out;
+    transition: border 300ms ease-in-out;
+    cursor: pointer;
+  }
+  
+  .numberContentBoxsTopsMainOverview {
+    color: black;
+    font-size: 35px;
+  }
+  
+  .boxsTopsMainOverview:hover {
+    border: #3751ff 1px solid;
+    color: #3751ff;
+    transition: color 300ms ease-in-out;
+    transition: border 300ms ease-in-out;
+  }
+  
+  .boxsTopsMainOverview:hover h2 {
+    color: #3751ff;
+    transition: color 150ms ease-in-out;
+  }
+  
+  .contentBoxsTopsMainOverview {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .ContentMainOverviewBottom {
+    margin: 40px 20px 0px 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+  }
+  
+  .divContentMainOverviewBottomLeft {
+    background-color: white;
+    flex: 1;
+    border: 1px solid #dfe0eb;
+    border-radius: 7px;
+    display: flex;
+  }
+  
+  .divContentMainOverviewBottomRight {
+    background-color: white;
+    border: 1px solid #dfe0eb;
+    flex: 1;
+    border-radius: 7px;
+    display: flex;
+  }
+  
+  .ContentMainOverviewBottomLeft {
+    display: flex;
+    margin: 10px 10px -1px 10px;
+    flex-direction: column;
+    flex: 1;
+    padding: 15px 15px 0px 15px;
+  }
+  
+  .HeaderMainOverviewBottomLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .TopHeaderMainOverviewBottomLeft {
+    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .TopHeaderMainOverviewBottomLeft h4 {
+    cursor: default;
+    font-weight: bold;
+    font-size: 19px;
+  }
+  
+  .TopHeaderMainOverviewBottomLeft p {
+    cursor: pointer;
+    color: blue;
+    font-size: 13px;
+  }
+  
+  .BottomHeaderMainOverviewBottomLeft {
+    font-size: 13px;
+    color: #9fa2b4;
+    letter-spacing: 0.1px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+  }
+  
+  .BottomHeaderMainOverviewBottomLeft span {
+    cursor: pointer;
+    color: black;
+  }
+  
+  .opcoesEsquerda {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .optionMainOverviewBottomLeft {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+    font-size: 14px;
+    border-bottom: 1px #dfe0eb solid;
+    transition: color 300ms ease-in-out;
+    padding: 20px 0px;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    margin: 0;
+  }
+  
+  .optionMainOverviewBottomLeft:hover {
+    transition: color 300ms ease-in-out;
+    color: #3751ff;
+  }
+  
+  .optionMainOverviewBottomLeft:hover .nEsq {
+    transition: color 300ms ease-in-out;
+    color: #3751ff;
+  }
+  
+  .optionMainOverviewBottomLeft p:nth-child(1) {
+    margin: 0;
+  }
+  
+  .optionMainOverviewBottomLeft p:nth-child(2) {
+    color: #9fa2b4;
+  }
+  
+  .ContentMainOverviewBottomRight {
+    display: flex;
+    margin: 10px 10px -1px 10px;
+    flex-direction: column;
+    flex: 1;
+    padding: 15px 15px 0px 15px;
+  }
+  
+  .HeaderMainOverviewBottomRight {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .TopHeaderMainOverviewBottomRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .TopHeaderMainOverviewBottomRight h4 {
+    cursor: default;
+    font-weight: bold;
+    font-size: 19px;
+  }
+  
+  .TopHeaderMainOverviewBottomRight p {
+    cursor: pointer;
+    color: blue;
+    font-size: 13px;
+  }
+  
+  .BottomHeaderMainOverviewBottomRight {
+    font-size: 12px;
+    color: #9fa2b4;
+    letter-spacing: 0.1px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+  }
+  
+  .optionsMainOverviewBottomRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .optionMainOverviewBottomRight {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+    font-size: 14px;
+    border-bottom: 1px #dfe0eb solid;
+    transition: color 300ms ease-in-out;
+    padding: 20px 0px;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+  }
+  
+  .optionMainOverviewBottomRight:nth-child(1) {
+    cursor: auto;
+  }
+  
+  .createTaskOverview {
+    cursor: auto;
+    font-size: 14px;
+    color: black;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .createTaskOverview:focus {
+    outline: none;
+  }
+  
+  .optionMainOverviewBottomRight i {
+    cursor: pointer;
+  }
+  
+  .optionMainOverviewBottomRight:hover {
+    transition: color 300ms ease-in-out;
+    color: #3751ff;
+  }
+  
+  .contentOptionMainOverviewBottomRight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .op1Dir {
+    transition: color 300ms ease-in-out;
+    color: #c5c7cd;
+  }
+  
+  .op1Dir:hover {
+    transition: color 300ms ease-in-out;
+    color: #3751ff;
+  }
+  
+  .customcb {
+    width: 17px;
+    height: 17px;
+    margin: 2px 0 5px 0;
+    background: #c5c7cd;
+    border-radius: 100%;
+    position: relative;
+  }
+  
+  .customcb label.inner {
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 100px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 2.1px;
+    left: 1.93px;
+    z-index: 1;
+    background: white;
+  }
+  
+  .customcb label.outer {
+    margin-left: 25px;
+  }
+  
+  .customcb [type="checkbox"] {
+    display: none;
+  }
+  
+  .purple.customcb input[type="checkbox"]:checked + label.inner {
+    background: #596be4;
+  }
+  
+  .customcb2 {
+    width: 17px;
+    height: 17px;
+    margin: 2px 0 5px 0;
+    background: #c5c7cd;
+    border-radius: 100%;
+    position: relative;
+  }
+  
+  .customcb2 label.inner2 {
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 100px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 2.1px;
+    left: 1.93px;
+    z-index: 1;
+    background: white;
+  }
+  .customcb2 label.outer2 {
+    margin-left: 25px;
+  }
+  .customcb2 [type="checkbox"] {
+    display: none;
+  }
+  .purple2.customcb2 input[type="checkbox"]:checked + label.inner2 {
+    background: #596be4;
+  }
+  
+  .customcb3 {
+    width: 17px;
+    height: 17px;
+    margin: 2px 0 5px 0;
+    background: #c5c7cd;
+    border-radius: 100%;
+    position: relative;
+  }
+  
+  .customcb3 label.inner3 {
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 100px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 2.1px;
+    left: 1.93px;
+    z-index: 1;
+    background: white;
+  }
+  
+  .customcb3 label.outer3 {
+    margin-left: 25px;
+  }
+  
+  .customcb3 [type="checkbox"] {
+    display: none;
+  }
+  
+  .purple3.customcb3 input[type="checkbox"]:checked + label.inner3 {
+    background: #596be4;
+  }
+  
+  .statusTaskOverviewURGENT {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
+    border-radius: 9px;
+    background-color: #fec400;
+    color: white;
+  }
+  
+  .statusTaskOverviewNEW {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
+    border-radius: 9px;
+    background-color: #29cc97;
+    color: white;
+  }
+  
+  .statusTaskOverviewDEFAULT {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
+    border-radius: 9px;
+    background-color: #f0f1f7;
+    color: #9fa2b4;
+  }
+  
+  @media (max-width: 918px) {
+    
+    .overviewTitle {
+      font-size: 30px;
+    }
+  
+    .accountHeader {
+      font-size: 20px;
+    }
+  
+    .ContentMainOverviewTop {
+      flex-direction: column;
+    }
+  
+    .contentBoxsTopsMainOverview p {
+      font-size: 30px;
+    }
+  
+    .contentBoxsTopsMainOverview h2 {
+      font-size: 60px;
+    }
+  
+    .ContentMainOverviewBottom {
+      flex-direction: column;
+    }
+  
+    .TopHeaderMainOverviewBottomLeft h4 {
+      font-size: 40px;
+    }
+  
+    .TopHeaderMainOverviewBottomLeft p {
+      font-size: 20px;
+    }
+  
+    .BottomHeaderMainOverviewBottomLeft p {
+      font-size: 20px;
+    }
+  
+    .optionMainOverviewBottomLeft {
+      font-size: 25px;
+    }
+  
+    .divContentMainOverviewBottomRight {
+      margin-bottom: 20px;
+    }
+  
+    .TopHeaderMainOverviewBottomRight h4 {
+      font-size: 40px;
+    }
+  
+    .TopHeaderMainOverviewBottomRight p {
+      font-size: 20px;
+    }
+  
+    .BottomHeaderMainOverviewBottomRight p {
+      font-size: 20px;
+    }
+  
+    .optionMainOverviewBottomRight {
+      font-size: 25px;
+    }
+  
+    .createTaskOverview {
+      font-size: 23px;
+    }
+  
+    .statusTaskOverviewURGENT,
+    .statusTaskOverviewNEW,
+    .statusTaskOverviewDEFAULT {
+      font-size: 20px;
+    }
+  }

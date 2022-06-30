@@ -1,0 +1,119 @@
+nav {
+    background-color: #363740;
+    flex: 1;
+  }
+  
+  .contentNav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .headerNav {
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 20px 20px 10px;
+    font-size: 19px;
+    color: #a4a6b3;
+  }
+  
+  .headerNav:hover {
+    color: #a4a6b3;
+  }
+  
+  .mainContentNav {
+    border-bottom: 1px solid rgb(78, 78, 78);
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  
+  .secondaryContentNav {
+    margin-top: 10px;
+  }
+  
+  .navOption {
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    padding: 15px 15px 15px 25px;
+    font-size: 16px;
+    text-align: center;
+    color: #a4a6b3;
+    letter-spacing: 0.2px;
+    align-items: center;
+    transition: background, color, border 300ms ease-in-out;
+  }
+  
+  .navOption i {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .navOption h4 {
+    flex: 5;
+    text-align: left;
+  }
+  
+  .mainContentNav .navOption:nth-child(1) {
+    transition: background, color 300ms ease-in-out;
+    transition: border 100ms ease-in-out;
+    background-color: #47484c;
+    color: #dde2ff;
+    border-left: 1.6px solid #dde2ff;
+  }
+  
+  .mainContentNav .navOption:nth-child(1):hover {
+    transition: background, color 300ms ease-in-out;
+    transition: border 70ms ease-in-out;
+    background-color: #47484c;
+    color: #dde2ff;
+    border-left: 2px solid #dde2ff;
+  }
+  
+  .navOption:hover {
+    transition: background, color 300ms ease-in-out;
+    transition: border 100ms ease-in-out;
+    background-color: #47484c;
+    color: #dde2ff;
+    border-left: 2px solid #dde2ff;
+  }
+  
+  
+  @media (max-width: 918px) {
+    .navOption {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 788px) {
+    nav {
+      flex: 0.6;
+    }
+  
+    .headerNav i {
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    .headerNav h4 {
+      display: none;
+      visibility: hidden;
+    }
+  
+    .navOption {
+      padding: 15px 0px 15px 0px;
+    }
+  
+    .navOption h4 {
+      display: none;
+      visibility: hidden;
+    }
+  }
